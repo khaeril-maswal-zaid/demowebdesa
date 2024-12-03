@@ -20,6 +20,7 @@ import DataPendidikan from "./Pages/DataPendidikan";
 import DataPekerjaan from "./Pages/DataPekerjaan";
 import Kontak from "./Pages/Kontak";
 import Aduan from "./Pages/Aduan";
+import Sdgs from "./Pages/Sdgs";
 
 function App() {
   return (
@@ -56,6 +57,7 @@ function App() {
         <Route path="/layanan-pengaduan" element={<Aduan />} />
 
         <Route path="/keuangan-dasa" element={<KeuanganDesa />} />
+        <Route path="/sdgs-desa" element={<Sdgs />} />
       </Routes>
     </Router>
   );
