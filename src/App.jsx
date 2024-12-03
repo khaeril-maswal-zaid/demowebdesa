@@ -21,6 +21,7 @@ import DataPekerjaan from "./Pages/DataPekerjaan";
 import Kontak from "./Pages/Kontak";
 import Aduan from "./Pages/Aduan";
 import Sdgs from "./Pages/Sdgs";
+import Idm from "./Pages/Idm";
 
 function App() {
   return (
@@ -57,6 +58,7 @@ function App() {
         <Route path="/layanan-pengaduan" element={<Aduan />} />
 
         <Route path="/keuangan-dasa" element={<KeuanganDesa />} />
+        <Route path="/status-idm" element={<Idm />} />
         <Route path="/sdgs-desa" element={<Sdgs />} />
       </Routes>
     </Router>
