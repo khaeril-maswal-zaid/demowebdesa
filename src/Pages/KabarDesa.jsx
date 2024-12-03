@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 
-const ProfilWilayah = () => {
+const KabarDesa = ({ title }) => {
   return (
     <>
       <Navbar />
@@ -71,9 +71,7 @@ const ProfilWilayah = () => {
                   </span>
                 </div>
               </div>
-              <h1 className="display-6 mb-lg-1 mb-2 text-uppercase">
-                Profil Wilayah{" "}
-              </h1>
+              <h1 className="display-6 mb-lg-1 mb-2 text-uppercase">{title}</h1>
               <div className="mb-4" style={{ fontSize: "77%" }}>
                 <span className="btn btn-primary btn-sm fw-semi-bold rounded-0 p-0 px-1 me-2">
                   KABAR DESA
@@ -212,4 +210,4 @@ const ProfilWilayah = () => {
   );
 };
 
-export default ProfilWilayah;
+export default KabarDesa;

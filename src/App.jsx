@@ -2,7 +2,7 @@ import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 import Page404 from "./Pages/Page404";
 import Home from "./Pages/Home";
-import ProfilWilayah from "./Pages/ProfilWilayah";
+import KabarDesa from "./Pages/KabarDesa";
 import KeuanganDesa from "./Pages/KeuanganDesa";
 import Galery from "./Pages/Galery";
 import SejarahDesa from "./Pages/SejarahDesa";
@@ -29,7 +29,14 @@ function App() {
       <Routes>
         <Route path="/*" element={<Page404 />} />
         <Route path="/" element={<Home />} />
-        <Route path="/profil-wilayah" element={<ProfilWilayah />} />
+        <Route
+          path="/profil-wilayah"
+          element={<KabarDesa title={"Profil Wilayah"} />}
+        />
+        <Route
+          path="/potensi-desa"
+          element={<KabarDesa title={"Potensi Desa"} />}
+        />
         <Route path="/sejarah-desa" element={<SejarahDesa />} />
         <Route path="/galeri-desa" element={<Galery />} />
 

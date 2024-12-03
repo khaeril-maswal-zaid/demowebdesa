@@ -49,13 +49,13 @@ const Navbar = () => {
               Beranda
             </Link>
             <div className="nav-item dropdown">
-              <Link
-                to="/#"
+              <a
+                href="/#"
                 className="nav-link dropdown-toggle"
                 data-bs-toggle="dropdown"
               >
                 Profil
-              </Link>
+              </a>
               <div className="dropdown-menu bg-light m-0">
                 <Link to="/profil-wilayah" className="dropdown-item">
                   Profil Wilayah
@@ -69,13 +69,13 @@ const Navbar = () => {
               </div>
             </div>
             <div className="nav-item dropdown">
-              <Link
-                to="/#"
+              <a
+                href="/#"
                 className="nav-link dropdown-toggle"
                 data-bs-toggle="dropdown"
               >
                 Pemerintahan
-              </Link>
+              </a>
               <div className="dropdown-menu bg-light m-0">
                 <Link
                   to="/badan-permusyawaratan-desa"
@@ -92,13 +92,13 @@ const Navbar = () => {
               </div>
             </div>
             <div className="nav-item dropdown">
-              <Link
-                to="/#"
+              <a
+                href="/#"
                 className="nav-link dropdown-toggle"
                 data-bs-toggle="dropdown"
               >
                 Kelembagaan
-              </Link>
+              </a>
               <div className="dropdown-menu bg-light m-0">
                 <Link className="dropdown-item" to="/lembaga-pemberdayaan-desa">
                   Lembaga Pemberdayaan Desa (LPM)
@@ -115,13 +115,13 @@ const Navbar = () => {
               </div>
             </div>
             <div className="nav-item dropdown">
-              <Link
-                to="/#"
+              <a
+                href="/#"
                 className="nav-link dropdown-toggle"
                 data-bs-toggle="dropdown"
               >
                 Data
-              </Link>
+              </a>
               <div className="dropdown-menu bg-light m-0">
                 <Link to="/data-desa/data-wilayah" className="dropdown-item">
                   Data Wilayah
@@ -159,8 +159,8 @@ const Navbar = () => {
           </Link>
           <Link
             to="/kontak-desa"
-            className="btn btn-primary rounded d-block d-md-none m-3 mb-5 py-2"
-            style={{ maxHeight: "45px !important" }}
+            className="btn btn-primary align-middle rounded d-block d-md-none m-3 mb-5 py-2"
+            style={{ maxHeight: "42px" }}
           >
             Kontak kami
             <i className="fa fa-arrow-right ms-3" />
