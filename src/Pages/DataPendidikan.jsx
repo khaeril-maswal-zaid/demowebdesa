@@ -1,7 +1,20 @@
+import DataDesaChart from "../Components/DataDesaChart";
 import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
 
 const DataPendidikan = () => {
+  const dataChart = [
+    { name: "BELUM MASUK TK/KELOMPOK BERMAIN", y: 246 },
+    { name: "SEDANG TK/KELOMPOK BERMAIN", y: 246 },
+    { name: "TIDAK PERNAH SEKOLAH", y: 246 },
+    { name: "TIDAK TAMAT SD/SEDERAJAT", y: 246 },
+    { name: "SEDANG SLTP/SEDERAJAT", y: 246 },
+    { name: "SEDANG SLTA/SEDERAJAT", y: 246 },
+    { name: "SEDANG S-1/SEDERAJAT", y: 246 },
+    { name: "TIDAK DAPAT MEMBACA DAN MENULIS HURUF LATIN", y: 246 },
+    { name: "Doubel klik ki untuk edit", y: 246 },
+  ];
+
   return (
     <>
       <Navbar />
@@ -184,12 +197,15 @@ const DataPendidikan = () => {
               </tr>
             </tbody>
           </table>
-          <figure className="highcharts-figure mt-5">
-            <div id="container" />
-          </figure>
-          <div className="close"></div>
+
+          <div className="mt-5">
+            <DataDesaChart
+              data={dataChart}
+              title="Data Penduduk Berdasarkan Pendidikan"
+            />
+          </div>
         </div>
-      </section>{" "}
+      </section>
       <Footer />
     </>
   );

@@ -1,7 +1,16 @@
 import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
+import DataDesaChart from "../Components/DataDesaChart";
 
 const DataAgama = () => {
+  const dataChart = [
+    { name: "ISLAM", y: 246 },
+    { name: "KRISTEN", y: 246 },
+    { name: "KATHOLIK", y: 246 },
+    { name: "HINDU", y: 246 },
+    { name: "Double klik ki untuk edit", y: 246 },
+  ];
+
   return (
     <>
       <Navbar />
@@ -143,10 +152,13 @@ const DataAgama = () => {
               </tr>
             </tbody>
           </table>
-          <figure className="highcharts-figure mt-5">
-            <div id="container" />
-          </figure>
-          <div className="close"></div>
+
+          <div className="mt-5">
+            <DataDesaChart
+              data={dataChart}
+              title="Data Penduduk Berdasarkan Status Perkawinan"
+            />
+          </div>
         </div>
       </section>
       <Footer />

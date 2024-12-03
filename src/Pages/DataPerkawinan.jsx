@@ -1,7 +1,14 @@
+import DataDesaChart from "../Components/DataDesaChart";
 import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
 
 const DataPerkawinan = () => {
+  const dataChart = [
+    { name: "KAWIN", y: 246 },
+    { name: "CERAI HIDUP", y: 246 },
+    { name: "Double klik ki untuk edit", y: 246 },
+  ];
+
   return (
     <>
       <Navbar />
@@ -126,10 +133,13 @@ const DataPerkawinan = () => {
               </tr>
             </tbody>
           </table>
-          <figure className="highcharts-figure mt-5">
-            <div id="container" />
-          </figure>
-          <div className="close"></div>
+
+          <div className="mt-5">
+            <DataDesaChart
+              data={dataChart}
+              title="Data Penduduk Berdasarkan Status Perkawinan"
+            />
+          </div>
         </div>
       </section>
       <Footer />

@@ -1,7 +1,89 @@
 import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
 
+import Highcharts from "highcharts";
+import HighchartsReact from "highcharts-react-official";
+
 const Sdgs = () => {
+  const Options = {
+    chart: {
+      type: "column",
+    },
+    title: {
+      text: "Skor 18 Goals SDGs Desa",
+    },
+    subtitle: {
+      text: "Desa Wakanda Raya, Kec. Konoha Timur, Kab. Londong Raya",
+    },
+    xAxis: {
+      type: "category",
+      labels: {
+        rotation: -45,
+        style: {
+          fontSize: "13px",
+          fontFamily: "Verdana, sans-serif",
+        },
+      },
+    },
+    yAxis: {
+      min: 0,
+      title: {
+        text: "Skor Nilai",
+      },
+    },
+    legend: {
+      enabled: false,
+    },
+    tooltip: {
+      pointFormat: "Skor Nilai: <b>{point.y:.1f}</b>",
+    },
+    series: [
+      {
+        name: "Population",
+        // colors: [
+        //   '#9b20d9', '#9215ac', '#861ec9', '#7a17e6', '#7010f9', '#691af3',
+        //   '#6225ed', '#5b30e7', '#533be1', '#4c46db', '#4551d5', '#3e5ccf',
+        //   '#3667c9', '#2f72c3', '#277dbd', '#1f88b7', '#1693b1', '#0a9eaa',
+        //   '#03c69b', '#00f194'
+        // ],
+        colorByPoint: true,
+        groupPadding: 0,
+        data: [
+          ["Desa Tanpa Kemiskinan", 46.98],
+          ["Desa Tanpa Kelaparan", 49.54],
+          ["Desa Sehat dan Sejahtera", 60.11],
+          ["Pendidikan Desa Berkualitas", 23.31],
+          ["Keterlibatan Perempuan Desa", 42.11],
+          ["Desa Layak Air Bersih dan Sanitasi", 72.16],
+          ["Desa Berenergi Bersih dan Terbarukan", 99.25],
+          ["Pertumbuhan Ekonomi Desa Merata", 31.74],
+          ["Infrastruktur dan Inovasi Desa Sesuai Kebutuhan", 0],
+          ["Desa Tanpa Kesenjangan", 25.85],
+          ["Kawasan Pemukiman Desa Aman dan Nyaman", 79.35],
+          ["Konsumsi dan Produksi Desa Sadar Lingkungan", 0],
+          ["Desa Tanggap Perubahan Iklim", 0],
+          ["Desa Peduli Lingkungan Laut", 0],
+          ["Desa Peduli Lingkungan Darat", 0],
+          ["Desa Damai Berkeadilan", 49.46],
+          ["Kemitraan Untuk Pembangunan Desa", 0],
+          ["Kelembagaan Desa Dinamis dan Budaya Desa Adaptif", 0],
+        ],
+        dataLabels: {
+          enabled: true,
+          rotation: -90,
+          color: "#FFFFFF",
+          align: "right",
+          format: "{point.y:.1f}", // one decimal
+          y: 10, // 10 pixels down from the top
+          style: {
+            fontSize: "13px",
+            fontFamily: "Verdana, sans-serif",
+          },
+        },
+      },
+    ],
+  };
+
   return (
     <>
       <Navbar />
@@ -344,11 +426,9 @@ const Sdgs = () => {
               </div>
             </div>
           </div>
-          <div className="chart-line mt-5">
-            <figure className="highcharts-figure">
-              <div id="container" />
-            </figure>
-            <div className="close"></div>
+
+          <div className="mt-5">
+            <HighchartsReact highcharts={Highcharts} options={Options} />
           </div>
         </div>
       </section>

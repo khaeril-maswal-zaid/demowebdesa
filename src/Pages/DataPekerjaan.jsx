@@ -1,7 +1,10 @@
+import DataDesaChart from "../Components/DataDesaChart";
 import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
 
 const DataPekerjaan = () => {
+  const dataChart = [{ name: "Doubel klik ki untuk edit", y: 123 }];
+
   return (
     <>
       <Navbar />
@@ -103,10 +106,13 @@ const DataPekerjaan = () => {
               </tr>
             </tbody>
           </table>
-          <figure className="highcharts-figure mt-5">
-            <div id="container" />
-          </figure>
-          <div className="close"></div>
+
+          <div className="mt-5">
+            <DataDesaChart
+              data={dataChart}
+              title="Data Penduduk Berdasarkan Pekerjaan"
+            />
+          </div>
         </div>
       </section>
       <Footer />

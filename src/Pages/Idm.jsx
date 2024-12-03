@@ -1,4 +1,5 @@
 import Footer from "../Components/Footer";
+import IdmChart from "../Components/IdmChart";
 import Navbar from "../Components/Navbar";
 
 const Idm = () => {
@@ -155,10 +156,7 @@ const Idm = () => {
               </div>
             </div>
             <div className="col-md-6">
-              <figure className="highcharts-figure my-0">
-                <div id="container" />
-              </figure>
-              <div className="close"></div>
+              <IdmChart />
             </div>
           </div>
           <div className="overflow-auto">

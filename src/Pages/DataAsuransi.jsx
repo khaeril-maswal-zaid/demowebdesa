@@ -1,7 +1,15 @@
+import DataDesaChart from "../Components/DataDesaChart";
 import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
 
 const DataAsuransi = () => {
+  const dataChart = [
+    { name: "Tidak/Belum Punya", y: 246 },
+    { name: "BPJS Penerima Bantuan Iuran", y: 246 },
+    { name: "BPJS Non Penerima Bantuan Iuran", y: 246 },
+    { name: "Doubel klik ki untuk edit", y: 246 },
+  ];
+
   return (
     <>
       <Navbar />
@@ -135,10 +143,13 @@ const DataAsuransi = () => {
               </tr>
             </tbody>
           </table>
-          <figure className="highcharts-figure mt-5">
-            <div id="container" />
-          </figure>
-          <div className="close"></div>
+
+          <div className="mt-5">
+            <DataDesaChart
+              data={dataChart}
+              title="Data Penduduk Berdasarkan Asuransi Kesehatan"
+            />
+          </div>
         </div>
       </section>
       <Footer />
