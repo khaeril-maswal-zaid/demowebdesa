@@ -1,8 +1,10 @@
 import Footer from "../Components/Footer";
+import Navbar from "../Components/Navbar";
 
 const Galery = () => {
   return (
     <>
+      <Navbar />
       <section className="mb-md-4">
         <div
           className="container-fluid page-header py-5 mb-4 mb-md-5 wow fadeIn"

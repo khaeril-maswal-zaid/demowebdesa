@@ -1,8 +1,7 @@
-import { Link } from "react-router-dom";
-import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
+import Navbar from "../Components/Navbar";
 
-const ProfilWilayah = () => {
+const SejarahDesa = () => {
   return (
     <>
       <Navbar />
@@ -30,11 +29,11 @@ const ProfilWilayah = () => {
         <div className="container-xxl">
           <div className="container">
             <div className="alert alert-success py-2" role="alert">
-              <Link to="/">
+              <a href="/">
                 <i className="bi bi-house-door-fill" />
-              </Link>
+              </a>
               <span className="px-1">/</span>
-              <Link to="#">Informasi</Link>
+              <a href="#">Informasi</a>
               <span className="px-1">/</span>
               <span className="text-success">Kabar Desa</span>
             </div>
@@ -42,7 +41,6 @@ const ProfilWilayah = () => {
         </div>
         {/* Petunjuk URL Enad */}
       </section>
-
       {/* Features Start */}
       <section className="container-xxl py-5">
         <div className="container">
@@ -67,12 +65,12 @@ const ProfilWilayah = () => {
                 </div>
                 <div className="d-flex align-items-center">
                   <span className="ms-2">
-                    <i className="far fa-eye mr-2" /> 53
+                    <i className="far fa-eye mr-2" /> 52
                   </span>
                 </div>
               </div>
               <h1 className="display-6 mb-lg-1 mb-2 text-uppercase">
-                Profil Wilayah{" "}
+                Sejarah Desa
               </h1>
               <div className="mb-4" style={{ fontSize: "77%" }}>
                 <span className="btn btn-primary btn-sm fw-semi-bold rounded-0 p-0 px-1 me-2">
@@ -156,19 +154,19 @@ const ProfilWilayah = () => {
                           <h5 className="mb-0">Muhammad Fulan, S.Kmz</h5>
                           <span>Kepala Desa</span>
                           <div className="d-flex team-social mt-3">
-                            <Link
+                            <a
                               className="btn btn-lg-square rounded-circle mx-2"
-                              to="assetdemo/img/personil/default.jpg"
+                              href="/img/personil/default.jpg"
                               data-lightbox="aparatur"
                             >
                               <i className="fa fa-eye" />
-                            </Link>
-                            <Link
+                            </a>
+                            <a
                               className="btn btn-lg-square rounded-circle mx-2"
-                              to="/struktur-pemerintahan/kepala-desa/muhammad-fulan,-s.kmz"
+                              href="/struktur-pemerintahan/kepala-desa/muhammad-fulan,-s.kmz"
                             >
                               <i className="fa fa-link" />
-                            </Link>
+                            </a>
                           </div>
                         </div>
                       </div>
@@ -212,4 +210,4 @@ const ProfilWilayah = () => {
   );
 };
 
-export default ProfilWilayah;
+export default SejarahDesa;
