@@ -540,6 +540,7 @@ function Home() {
             </h1>
             <div className="overflowhidden border border-3 border-success rounded">
               <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12428.04460640446!2d120.41324731012118!3d-5.488315148052575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dbc0972e26dcbb5%3A0x32c1c4177d63233d!2sPakubalaho%2C%20Kec.%20Bonto%20Tiro%2C%20Kabupaten%20Bulukumba%2C%20Sulawesi%20Selatan!5e0!3m2!1sid!2sid!4v1684291021556!5m2!1sid!2sid"
                 width="100%"
                 height={450}
                 style={{ border: 0 }}
